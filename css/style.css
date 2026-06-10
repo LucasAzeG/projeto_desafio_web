@@ -16,14 +16,14 @@ label, input {
 }
 
 #div-form{
-    background-color: #ffffff
+    background-color: #f7ededf8
     width: 400px;
     min-height: 350px;
     margin: 20px auto;
     padding: 20px;
 }
 #div_dados{
-    background-color: #ff0000;
+    background-color: #ffffff
     width: 100%;
     height: 100px;
     margin: 20px 0px;
