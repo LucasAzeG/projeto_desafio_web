@@ -1,0 +1,11 @@
+console.log("Teste ")
+
+console.log('Comando de Saída')
+
+//COMENTÁRIO DE LINHA SIMPLES
+
+/*
+    COMENTÁRIO DE MÚLTIPLAS LINHAS, OU SEJA DESCREVER ALGO NESSE TIPO DE COMENTÁRIO...
+*/
+
+//CRIANDO VÁRIAVEIS
