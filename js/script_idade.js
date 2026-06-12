@@ -18,5 +18,7 @@ formDados.addEventListener('submit', (evt)=>{
     }else{
         situacaoIdade = `${nome}, você é menor de idade`
     } 
+
+    divResultado.innerHTML = situacaoIdade
     
 })
