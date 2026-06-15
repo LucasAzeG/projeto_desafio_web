@@ -15,9 +15,8 @@ formDados.addEventListener('submit', (evt)=>{
    let pecorrido = distancia_pecorrida / consumo
    let gasto = preço * pecorrido
 
-
-    divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto: ${pecorrido.toFixed(2).replace('.',',')}KM, O valor total a pagar com combustível para esse
-deslocamento.R$ ${gasto.toFixed(2).replace('.',',')}`
+    divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto:${pecorrido.toFixed(2).replace('.',',')}KM, O valor total a pagar com combustível para esse
+deslocamento. R$ ${gasto.toFixed(2).replace('.',',')}`
 
     formDados.reset()
     
