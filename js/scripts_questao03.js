@@ -12,10 +12,12 @@ formDados.addEventListener('submit', (evt)=>{
     let consumo = parseFloat(objFormDados.get('consumo'))
      let preço = parseFloat(objFormDados.get('preço'))
 
-   let area = largura * altura
+   let pecorrido = distancia_pecorrida / consumo
+   let gasto = preço * pecorrido
 
 
-    divResultado.innerHTML = `A área a ser pintada é de ${area.toFixed(2).replace('.',',')}m², Total de litros para pintar essa área é de ${parseFloat(area / 2).toFixed(2).replace('.',',')}`
+    divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto: ${pecorrido.toFixed(2).replace('.',',')}KM, O valor total a pagar com combustível para esse
+deslocamento.R$ ${gasto.toFixed(2).replace('.',',')}`
 
     formDados.reset()
     
