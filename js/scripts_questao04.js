@@ -8,12 +8,12 @@ formDados.addEventListener('submit', (evt)=>{
 
     const objFormDados = new FormData(formDados)
 
-    let distancia_pecorrida = parseFloat(objFormDados.get('distancia_pecorrida'))
-    let consumo = parseFloat(objFormDados.get('consumo'))
-     let preço = parseFloat(objFormDados.get('preço'))
+    let nome = parseFloat(objFormDados.get('nome'))
+    let nota1 = parseFloat(objFormDados.get('nota1'))
+    let nota2 = parseFloat(objFormDados.get('nota2'))
+    let nota3 = parseFloat(objFormDados.get('nota3'))
 
-   let pecorrido = distancia_pecorrida / consumo
-   let gasto = preço * pecorrido
+   let média = (nota1 + nota2 + nota3) / 3
 
 
     divResultado.innerHTML = `A quantidade de combustível necessário para percorrer o trajeto: ${pecorrido.toFixed(2).replace('.',',')}KM, O valor total a pagar com combustível para esse
