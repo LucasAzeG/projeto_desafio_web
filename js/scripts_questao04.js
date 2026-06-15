@@ -8,7 +8,7 @@ formDados.addEventListener('submit', (evt)=>{
 
     const objFormDados = new FormData(formDados)
 
-    let nome = parseFloat(objFormDados.get('nome'))
+    let nome = (objFormDados.get('nome'))
     let nota1 = parseFloat(objFormDados.get('nota1'))
     let nota2 = parseFloat(objFormDados.get('nota2'))
     let nota3 = parseFloat(objFormDados.get('nota3'))
@@ -18,13 +18,13 @@ formDados.addEventListener('submit', (evt)=>{
    let situacaoNota = ''
 
     if (media >=6 ){
-        situacaoIdade = `${nome}, Parabéns você foi aprovado`
+        situacaoNota = `${nome}, Parabéns você foi aprovado`
     }else{
-        situacaoIdade = `${nome}, Infelizmente, você foi reprovado`
+        situacaoNota = `${nome}, Infelizmente, você foi reprovado`
     } 
 
 
-    divResultado.innerHTML = `${nome.replace('.',',')}`
+    divResultado.innerHTML = situacaoNota
 
     formDados.reset()
     
