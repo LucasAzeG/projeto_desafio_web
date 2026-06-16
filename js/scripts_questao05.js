@@ -8,24 +8,25 @@ formDados.addEventListener('submit', (evt)=>{
 
     const objFormDados = new FormData(formDados)
 
-    let nome = (objFormDados.get('nome'))
-    let nota1 = parseFloat(objFormDados.get('nota1'))
-    let nota2 = parseFloat(objFormDados.get('nota2'))
-    let nota3 = parseFloat(objFormDados.get('nota3'))
+    let lado_e = parseFloat(objFormDados.get('lado_e'))
+    let lado_d = parseFloat(objFormDados.get('lado_d'))
+    let lado_c = parseFloat(objFormDados.get('lado_c'))
 
-   let media = (nota1 + nota2 + nota3) / 3
+    tipoTriangulo = ''
+        
+    if(lado_e == lado_d == lado_c){
+        tipoTriangulo = "Equilátero:"
+    }else if((lado_e == lado_d) && (lado_e == lado_c) && (lado_d == lado_c)){
+        tipoTriangulo = "Triângulo Isóscele"
+      }else if {
+        tipoTriangulo = "Triângulo Escaleno"
+      }
 
-   let situacaoNota = ''
+   
 
-    if (media >=6 ){
-        situacaoNota = `${nome}, Parabéns você foi aprovado`
-    }else{
-        situacaoNota = `${nome}, Infelizmente, você foi reprovado`
-    } 
+   
 
-
-    divResultado.innerHTML = situacaoNota
-
+    divResultado.innerHTML = tipoTriangulo
     formDados.reset()
     
 })
