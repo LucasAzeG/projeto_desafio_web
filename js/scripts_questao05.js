@@ -8,19 +8,21 @@ formDados.addEventListener('submit', (evt)=>{
 
     const objFormDados = new FormData(formDados)
 
-    let lado_e = parseFloat(objFormDados.get('lado_e'))
+    let lado_es = parseFloat(objFormDados.get('lado_es'))
     let lado_d = parseFloat(objFormDados.get('lado_d'))
     let lado_c = parseFloat(objFormDados.get('lado_c'))
 
-    tipoTriangulo = ''
+    let tipoTriangulo = ''
         
-    if(lado_e == lado_d == lado_c){
-        tipoTriangulo = "Equilátero:"
-    }else if((lado_e == lado_d) && (lado_e == lado_c) && (lado_d == lado_c)){
+    if(lado_es==lado_d && lado_d==lado_c){
+        tipoTriangulo = "Triângulo Equilátero"
+    }else if (lado_es==lado_d || lado_es==lado_c || lado_d==lado_c){
         tipoTriangulo = "Triângulo Isóscele"
-      }else if {
-        tipoTriangulo = "Triângulo Escaleno"
-      }
+       }else if (lado_es || lado_d || lado_c){
+        tipoTriangulo = "Triângulo Escaleno:"
+         }
+    
+    
 
    
 
